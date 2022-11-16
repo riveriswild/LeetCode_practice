@@ -207,4 +207,5 @@ string.lower() #The lower() method converts all uppercase characters in a string
 string.islower()
 string.isdigit()
 string.isupper()
+string.isalnum()
 
