@@ -18,15 +18,19 @@ class Solution:
     def count_unique_emails(self, emails: list) -> int:
         a = set()
         for email in emails:
-            first, last = email.split('@')
-            if '+' in first:
-                first = first[:first.index('+')]
-            a.add(first.replace('.', '') + '@' + last)
+            first, last = email.split("@")
+            if "+" in first:
+                first = first[: first.index("+")]
+            a.add(first.replace(".", "") + "@" + last)
         return len(a)
 
 
-emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
-emails2 = ["a@leetcode.com","b@leetcode.com","c@leetcode.com"]
+emails = [
+    "test.email+alex@leetcode.com",
+    "test.e.mail+bob.cathy@leetcode.com",
+    "testemail+david@lee.tcode.com",
+]
+emails2 = ["a@leetcode.com", "b@leetcode.com", "c@leetcode.com"]
 counter = Solution()
 result = counter.count_unique_emails(emails)
 print(result)

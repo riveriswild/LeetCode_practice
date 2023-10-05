@@ -1,10 +1,10 @@
-'''
+"""
 Given a Binary Tree, find the sum of all left leaves in it.
-'''
+"""
 
 
 class TreeNode:
-    def __init__(self, val=0, left = None, right = None):
+    def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
@@ -26,4 +26,4 @@ class Solution:
 
         dfs(root, False)
 
-        return self.total 
+        return self.total
